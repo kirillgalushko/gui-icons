@@ -7,6 +7,9 @@
   "files": [
     "dist/**/*"
   ],
+  "exports": {
+    "./*": "./dist/*"
+  },
   "scripts": {
     "build": "vue-tsc -b && vite build",
     "release": "node release.js"
