@@ -28,7 +28,7 @@ const svgoConfig = {
       name: 'addAttributesToSVGElement' as const,
       params: {
         attributes: [
-          { style: 'width: 1em; min-width: 1em; height: 1em; min-height: 1em; fill: currentColor;' }
+          { style: 'width: 1em; min-width: 1em; height: 1em; min-height: 1em;' }
         ]
       }
     }
