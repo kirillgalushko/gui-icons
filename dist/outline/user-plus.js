@@ -9,9 +9,9 @@ const r = {
   "stroke-width": "2",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em", fill: "currentColor" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
 };
-function l(i, t) {
+function l(h, t) {
   return n(), o("svg", r, t[0] || (t[0] = [
     e("path", { d: "M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" }, null, -1),
     e("path", { d: "M16 19h6" }, null, -1),

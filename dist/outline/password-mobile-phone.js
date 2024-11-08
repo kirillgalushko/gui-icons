@@ -9,9 +9,9 @@ const p = {
   "stroke-width": "2",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em", fill: "currentColor" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
 };
-function o(r, t) {
+function o(d, t) {
   return h(), e("svg", p, t[0] || (t[0] = [
     a('<path d="M12 17v4"></path><path d="M10 20l4 -2"></path><path d="M10 18l4 2"></path><path d="M5 17v4"></path><path d="M3 20l4 -2"></path><path d="M3 18l4 2"></path><path d="M19 17v4"></path><path d="M17 20l4 -2"></path><path d="M17 18l4 2"></path><path d="M7 14v-8a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v8"></path><path d="M11 5h2"></path><path d="M12 17v.01"></path>', 12)
   ]));

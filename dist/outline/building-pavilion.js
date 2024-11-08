@@ -9,9 +9,9 @@ const o = {
   "stroke-width": "2",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em", fill: "currentColor" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
 };
-function r(i, t) {
+function i(r, t) {
   return n(), l("svg", o, t[0] || (t[0] = [
     e("path", { d: "M3 21h7v-3a2 2 0 0 1 4 0v3h7" }, null, -1),
     e("path", { d: "M6 21l0 -9" }, null, -1),
@@ -19,8 +19,8 @@ function r(i, t) {
     e("path", { d: "M6 12h12a3 3 0 0 0 3 -3a9 8 0 0 1 -9 -6a9 8 0 0 1 -9 6a3 3 0 0 0 3 3" }, null, -1)
   ]));
 }
-const d = { render: r };
+const d = { render: i };
 export {
   d as default,
-  r as render
+  i as render
 };

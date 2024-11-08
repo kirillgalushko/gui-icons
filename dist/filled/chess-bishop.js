@@ -5,7 +5,7 @@ const n = {
   height: "24",
   viewBox: "0 0 24 24",
   fill: "currentColor",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em", fill: "currentColor" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
 };
 function o(r, t) {
   return l(), h("svg", n, t[0] || (t[0] = [
@@ -14,8 +14,8 @@ function o(r, t) {
     e("path", { d: "M18 18h-12a1 1 0 0 0 -1 1a2 2 0 0 0 2 2h10a2 2 0 0 0 1.987 -1.768l.011 -.174a1 1 0 0 0 -.998 -1.058z" }, null, -1)
   ]));
 }
-const c = { render: o };
+const a = { render: o };
 export {
-  c as default,
+  a as default,
   o as render
 };

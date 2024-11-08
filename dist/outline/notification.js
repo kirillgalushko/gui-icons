@@ -1,4 +1,4 @@
-import { openBlock as o, createElementBlock as n, createElementVNode as t } from "vue";
+import { openBlock as n, createElementBlock as o, createElementVNode as t } from "vue";
 const r = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
@@ -9,10 +9,10 @@ const r = {
   "stroke-width": "2",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em", fill: "currentColor" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
 };
 function i(l, e) {
-  return o(), n("svg", r, e[0] || (e[0] = [
+  return n(), o("svg", r, e[0] || (e[0] = [
     t("path", { d: "M10 6h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" }, null, -1),
     t("path", { d: "M17 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" }, null, -1)
   ]));

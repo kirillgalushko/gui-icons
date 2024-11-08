@@ -1,5 +1,5 @@
-import { openBlock as e, createElementBlock as a, createStaticVNode as o } from "vue";
-const r = {
+import { openBlock as e, createElementBlock as a, createStaticVNode as h } from "vue";
+const o = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
@@ -9,15 +9,15 @@ const r = {
   "stroke-width": "2",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em", fill: "currentColor" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
 };
-function h(l, t) {
-  return e(), a("svg", r, t[0] || (t[0] = [
-    o('<path d="M21 12a9 9 0 1 0 -9.968 8.948"></path><path d="M3.6 9h16.8"></path><path d="M3.6 15h6.4"></path><path d="M11.5 3a17.001 17.001 0 0 0 -1.886 13.802"></path><path d="M12.5 3a16.982 16.982 0 0 1 2.549 8.01"></path><path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z"></path>', 6)
+function r(l, t) {
+  return e(), a("svg", o, t[0] || (t[0] = [
+    h('<path d="M21 12a9 9 0 1 0 -9.968 8.948"></path><path d="M3.6 9h16.8"></path><path d="M3.6 15h6.4"></path><path d="M11.5 3a17.001 17.001 0 0 0 -1.886 13.802"></path><path d="M12.5 3a16.982 16.982 0 0 1 2.549 8.01"></path><path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z"></path>', 6)
   ]));
 }
-const i = { render: h };
+const d = { render: r };
 export {
-  i as default,
-  h as render
+  d as default,
+  r as render
 };

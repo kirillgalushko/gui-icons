@@ -9,7 +9,7 @@ const l = {
   "stroke-width": "2",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em", fill: "currentColor" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
 };
 function r(i, t) {
   return n(), o("svg", l, t[0] || (t[0] = [
@@ -18,8 +18,8 @@ function r(i, t) {
     e("path", { d: "M17 21l4 -4" }, null, -1)
   ]));
 }
-const h = { render: r };
+const c = { render: r };
 export {
-  h as default,
+  c as default,
   r as render
 };

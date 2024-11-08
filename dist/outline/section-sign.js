@@ -9,17 +9,17 @@ const r = {
   "stroke-width": "2",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em", fill: "currentColor" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
 };
-function l(i, t) {
+function i(l, t) {
   return n(), o("svg", r, t[0] || (t[0] = [
     e("path", { d: "M9.172 19a3 3 0 1 0 2.828 -4" }, null, -1),
     e("path", { d: "M14.83 5a3 3 0 1 0 -2.83 4" }, null, -1),
     e("path", { d: "M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" }, null, -1)
   ]));
 }
-const h = { render: l };
+const h = { render: i };
 export {
   h as default,
-  l as render
+  i as render
 };

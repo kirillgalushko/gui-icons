@@ -5,7 +5,7 @@ const o = {
   height: "24",
   viewBox: "0 0 24 24",
   fill: "currentColor",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em", fill: "currentColor" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
 };
 function c(n, l) {
   return e(), t("svg", o, l[0] || (l[0] = [
@@ -16,8 +16,8 @@ function c(n, l) {
     }, null, -1)
   ]));
 }
-const a = { render: c };
+const i = { render: c };
 export {
-  a as default,
+  i as default,
   c as render
 };

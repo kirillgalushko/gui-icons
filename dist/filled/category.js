@@ -1,14 +1,14 @@
-import { openBlock as l, createElementBlock as a, createElementVNode as e } from "vue";
-const h = {
+import { openBlock as a, createElementBlock as h, createElementVNode as e } from "vue";
+const l = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
   viewBox: "0 0 24 24",
   fill: "currentColor",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em", fill: "currentColor" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
 };
-function n(r, t) {
-  return l(), a("svg", h, t[0] || (t[0] = [
+function n(o, t) {
+  return a(), h("svg", l, t[0] || (t[0] = [
     e("path", { d: "M10 3h-6a1 1 0 0 0 -1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1 -1v-6a1 1 0 0 0 -1 -1z" }, null, -1),
     e("path", { d: "M20 3h-6a1 1 0 0 0 -1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1 -1v-6a1 1 0 0 0 -1 -1z" }, null, -1),
     e("path", { d: "M10 13h-6a1 1 0 0 0 -1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1 -1v-6a1 1 0 0 0 -1 -1z" }, null, -1),

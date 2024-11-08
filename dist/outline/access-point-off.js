@@ -1,4 +1,4 @@
-import { openBlock as e, createElementBlock as o, createStaticVNode as r } from "vue";
+import { openBlock as e, createElementBlock as o, createStaticVNode as h } from "vue";
 const n = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
@@ -9,15 +9,15 @@ const n = {
   "stroke-width": "2",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em", fill: "currentColor" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
 };
-function h(a, t) {
+function r(a, t) {
   return e(), o("svg", n, t[0] || (t[0] = [
-    r('<path d="M3 3l18 18"></path><path d="M14.828 9.172a4 4 0 0 1 1.172 2.828"></path><path d="M17.657 6.343a8 8 0 0 1 1.635 8.952"></path><path d="M9.168 14.828a4 4 0 0 1 0 -5.656"></path><path d="M6.337 17.657a8 8 0 0 1 0 -11.314"></path>', 5)
+    h('<path d="M3 3l18 18"></path><path d="M14.828 9.172a4 4 0 0 1 1.172 2.828"></path><path d="M17.657 6.343a8 8 0 0 1 1.635 8.952"></path><path d="M9.168 14.828a4 4 0 0 1 0 -5.656"></path><path d="M6.337 17.657a8 8 0 0 1 0 -11.314"></path>', 5)
   ]));
 }
-const d = { render: h };
+const d = { render: r };
 export {
   d as default,
-  h as render
+  r as render
 };

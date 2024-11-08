@@ -9,15 +9,15 @@ const r = {
   "stroke-width": "2",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em", fill: "currentColor" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
 };
 function a(n, t) {
   return e(), h("svg", r, t[0] || (t[0] = [
     o('<path d="M6.5 15a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0 -5z"></path><path d="M17 7.875l3 -1.687"></path><path d="M17 7.875v3.375"></path><path d="M17 7.875l-3 -1.687"></path><path d="M17 7.875l3 1.688"></path><path d="M17 4.5v3.375"></path><path d="M17 7.875l-3 1.688"></path>', 7)
   ]));
 }
-const p = { render: a };
+const d = { render: a };
 export {
-  p as default,
+  d as default,
   a as render
 };
