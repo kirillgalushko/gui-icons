@@ -6,7 +6,7 @@ export interface IconProps {
   [key: string]: any;
 }
 
-declare module './**/*.js' {
+declare module '@gui/icons/**/*.js' {
   const component: DefineComponent<IconProps>;
   export default component;
 }
