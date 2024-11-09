@@ -17,6 +17,4 @@
     "declarationDir": "./dist/types",
     "outDir": "./dist",
   },
-  "include": ["build/**/*.vue", "build/**/*.ts"],
-  "exclude": ["node_modules"]
 }
