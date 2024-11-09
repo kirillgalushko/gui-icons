@@ -1,12 +1,10 @@
-import type { DefineComponent } from 'vue'
 
-export interface IconProps {
-  class?: string;
-  style?: string;
-  [key: string]: any;
-}
-
-declare module '@gui/icons/**/*.js' {
-  const component: DefineComponent<IconProps>;
+declare module '@gui/icons/*' {
+  import type { DefineComponent } from 'vue'
+  const component: DefineComponent<{
+    class?: string;
+    style?: string;
+    [key: string]: any;
+  }>;
   export default component;
 }
