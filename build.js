@@ -46,7 +46,8 @@ function ensureDirectoryExists(dirPath) {
 function createVueComponent(file, optimizedSvg, outputSubDir) {
   const fileName = path.basename(file, '.svg');
   const variant = path.basename(outputSubDir)
-  const fileNameWithPostfix = fileName + '-' + variant
+  const prefix = 'icon'
+  const fileNameWithPostfix = `${prefix}-${fileName}-${variant}`
   const pascalCaseFileName = toPascalCase(fileNameWithPostfix);
   const vueFileContent = `
 <script lang="ts" setup></script>
