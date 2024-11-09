@@ -15,83 +15,88 @@ function toPascalCase(string) {
     .replace(new RegExp(/\w/), s => s.toUpperCase());
 }
 
-const clearDirectory = (dirPath) => {
+function clearDirectory(dirPath) {
   if (fs.existsSync(dirPath)) {
     fs.rmSync(dirPath, { recursive: true, force: true });
   }
-};
+}
 
-const generateVueComponents = async (inputDir, outputDir) => {
-  try {
-    clearDirectory(outputDir);
-    const svgFiles = await recursiveReaddir(inputDir, ['!*.svg']);
-    for (const file of svgFiles) {
-      let svgContent = fs.readFileSync(file, 'utf-8');
+function readAndOptimizeSVG(file) {
+  const svgContent = fs.readFileSync(file, 'utf-8');
+  return optimize(svgContent, {
+    multipass: true,
+    plugins: [
+      'preset-default',
+      {
+        name: 'addAttributesToSVGElement',
+        params: {
+          attributes: [{ style: 'width: 1em; min-width: 1em; height: 1em; min-height: 1em;' }],
+        },
+      },
+    ],
+  });
+}
 
-      const { data: optimizedSvg } = optimize(svgContent, {
-        multipass: true,
-        plugins: [
-          'preset-default',
-          {
-            name: 'addAttributesToSVGElement',
-            params: {
-              attributes: [
-                {
-                  style: 'width: 1em; min-width: 1em; height: 1em; min-height: 1em;',
-                },
-              ],
-            },
-          },
-        ],
-      });
+function ensureDirectoryExists(dirPath) {
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+  }
+}
 
-      const fileName = path.basename(file, '.svg');
-      const pascalCaseFileName = toPascalCase(fileName);
-
-      const relativePath = path.relative(inputDir, path.dirname(file));
-      const outputSubDir = path.join(outputDir, relativePath);
-
-      if (!fs.existsSync(outputSubDir)) {
-        fs.mkdirSync(outputSubDir, { recursive: true });
-      }
-
-      const vueFileContent = `
+function createVueComponent(file, optimizedSvg, outputSubDir) {
+  const fileName = path.basename(file, '.svg');
+  const pascalCaseFileName = toPascalCase(fileName);
+  const vueFileContent = `
 <script lang="ts" setup></script>
 <template>
   ${optimizedSvg}
 </template>
-      `;
+  `;
+  const vueFilePath = path.join(outputSubDir, `${pascalCaseFileName}.vue`);
+  fs.writeFileSync(vueFilePath, vueFileContent);
+  console.log(`Component for ${fileName}.svg created at ${vueFilePath}`);
+  return { vueFilePath, pascalCaseFileName };
+}
 
-      const vueFilePath = path.join(outputSubDir, `${pascalCaseFileName}.vue`);
+function updateIndexFile(outputSubDir, pascalCaseFileName) {
+  const indexFilePath = path.join(outputSubDir, 'index.ts');
+  const exportStatement = `export { default as ${pascalCaseFileName} } from './${pascalCaseFileName}.vue';\n`;
+  if (fs.existsSync(indexFilePath)) {
+    fs.appendFileSync(indexFilePath, exportStatement);
+  } else {
+    fs.writeFileSync(indexFilePath, exportStatement);
+  }
+}
 
-      fs.writeFileSync(vueFilePath, vueFileContent);
-      console.log(`Component for ${fileName}.svg created at ${vueFilePath}`);
+function generateBuildIndex(outputDir) {
+  const allDirs = fs.readdirSync(outputDir, { withFileTypes: true }).filter(item => item.isDirectory()).map(dir => dir.name);
+  const buildIndexPath = path.join(outputDir, 'index.ts');
+  let buildIndexContent = '';
+  allDirs.forEach(dir => {
+    buildIndexContent += `export * from './${dir}';\n`;
+  });
+  fs.writeFileSync(buildIndexPath, buildIndexContent);
+  console.log('Generated build/index.ts with re-exports for all components.');
+}
 
-      const indexFilePath = path.join(outputSubDir, 'index.ts');
-      const exportStatement = `export { default as ${pascalCaseFileName} } from './${pascalCaseFileName}.vue';\n`;
-
-      if (fs.existsSync(indexFilePath)) {
-        fs.appendFileSync(indexFilePath, exportStatement);
-      } else {
-        fs.writeFileSync(indexFilePath, exportStatement);
-      }
+async function generateVueComponents(inputDir, outputDir) {
+  try {
+    clearDirectory(outputDir);
+    ensureDirectoryExists(outputDir);
+    const svgFiles = await recursiveReaddir(inputDir, ['!*.svg']);
+    for (const file of svgFiles) {
+      const { data: optimizedSvg } = readAndOptimizeSVG(file);
+      const relativePath = path.relative(inputDir, path.dirname(file));
+      const outputSubDir = path.join(outputDir, relativePath);
+      ensureDirectoryExists(outputSubDir);
+      const { pascalCaseFileName } = createVueComponent(file, optimizedSvg, outputSubDir);
+      updateIndexFile(outputSubDir, pascalCaseFileName);
     }
-
-    const allDirs = fs.readdirSync(outputDir, { withFileTypes: true }).filter(item => item.isDirectory()).map(dir => dir.name);
-    const buildIndexPath = path.join(outputDir, 'index.ts');
-    let buildIndexContent = '';
-
-    allDirs.forEach(dir => {
-      buildIndexContent += `export * from './${dir}';\n`;
-    });
-
-    fs.writeFileSync(buildIndexPath, buildIndexContent);
-    console.log('Generated build/index.ts with re-exports for all components.');
-
+    generateBuildIndex(outputDir);
   } catch (error) {
     console.error('Error while generating Vue components:', error);
   }
-};
+}
 
 const inputDirectory = './icons';
 const outputDirectory = './build';
