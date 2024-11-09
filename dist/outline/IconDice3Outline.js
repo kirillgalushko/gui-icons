@@ -9,7 +9,8 @@ const n = {}, c = {
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" },
+  viewBox: "0 0 24 24"
 };
 function i(s, r) {
   return t(), o("svg", c, r[0] || (r[0] = [

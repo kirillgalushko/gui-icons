@@ -9,14 +9,15 @@ const h = {}, r = {
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" },
+  viewBox: "0 0 24 24"
 };
 function i(m, a) {
   return e(), t("svg", r, a[0] || (a[0] = [
     o("path", { d: "M4 3h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1m14 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1m-7 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1m-7 7h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1m14 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1m-7 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1m0 7h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1" }, null, -1)
   ]));
 }
-const c = /* @__PURE__ */ n(h, [["render", i]]);
+const v = /* @__PURE__ */ n(h, [["render", i]]);
 export {
-  c as I
+  v as I
 };

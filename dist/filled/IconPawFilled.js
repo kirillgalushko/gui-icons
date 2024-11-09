@@ -1,11 +1,12 @@
 import { openBlock as t, createElementBlock as l, createElementVNode as e } from "vue";
-import { _ as n } from "./IconAccessibleFilled.js";
-const o = {}, r = {
+import { _ as o } from "./IconAccessibleFilled.js";
+const n = {}, r = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
   fill: "currentColor",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" },
+  viewBox: "0 0 24 24"
 };
 function i(m, c) {
   return t(), l("svg", r, c[0] || (c[0] = [
@@ -13,7 +14,7 @@ function i(m, c) {
     e("path", { d: "M14.972 3c-1.459 0-2.647 1.388-2.916 3.113-.29 1.867.574 3.65 2.174 3.867q.153.02.296.02c1.39 0 2.543-1.265 2.877-2.883l.041-.23c.29-1.867-.574-3.65-2.174-3.867a2 2 0 0 0-.298-.02M4.217 7c-.274 0-.544.054-.797.161-1.426.615-1.767 2.562-1.078 4.335C2.905 12.947 4.052 14 5.283 14c.274 0 .544-.054.797-.161 1.426-.615 1.767-2.562 1.078-4.335C6.595 8.053 5.448 7 4.217 7" }, null, -1)
   ]));
 }
-const d = /* @__PURE__ */ n(o, [["render", i]]);
+const d = /* @__PURE__ */ o(n, [["render", i]]);
 export {
   d as I
 };

@@ -1,18 +1,19 @@
 import { openBlock as t, createElementBlock as l, createElementVNode as c } from "vue";
-import { _ as r } from "./IconAccessibleFilled.js";
-const n = {}, o = {
+import { _ as o } from "./IconAccessibleFilled.js";
+const r = {}, n = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
   fill: "currentColor",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" },
+  viewBox: "0 0 24 24"
 };
 function i(m, e) {
-  return t(), l("svg", o, e[0] || (e[0] = [
+  return t(), l("svg", n, e[0] || (e[0] = [
     c("path", { d: "M14.058 3.41c-1.807.767-2.995 2.453-3.056 4.38L11 7.972l-.243-.023C8.365 7.68 6.259 6.437 4.813 4.418a1 1 0 0 0-1.685.092l-.097.186-.049.099c-.719 1.485-1.19 3.29-1.017 5.203l.03.273c.283 2.263 1.5 4.215 3.779 5.679l.173.107-.081.043c-1.315.663-2.518.952-3.827.9-1.056-.04-1.446 1.372-.518 1.878 3.598 1.961 7.461 2.566 10.792 1.6 4.06-1.18 7.152-4.223 8.335-8.433l.127-.495c.238-.993.372-2.006.401-3.024l.003-.332.393-.779.44-.862.214-.434.118-.247c.265-.565.456-1.033.574-1.43l.014-.056.008-.018c.22-.593-.166-1.358-.941-1.358l-.122.007a1 1 0 0 0-.231.057l-.086.038a8 8 0 0 1-.88.36l-.356.115-.271.08-.772.214c-1.336-1.118-3.144-1.254-5.012-.554l-.211.084z" }, null, -1)
   ]));
 }
-const d = /* @__PURE__ */ r(n, [["render", i]]);
+const d = /* @__PURE__ */ o(r, [["render", i]]);
 export {
   d as I
 };

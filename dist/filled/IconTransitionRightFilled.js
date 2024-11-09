@@ -1,18 +1,19 @@
-import { openBlock as e, createElementBlock as n, createElementVNode as o } from "vue";
-import { _ as r } from "./IconAccessibleFilled.js";
-const i = {}, l = {
+import { openBlock as t, createElementBlock as o, createElementVNode as n } from "vue";
+import { _ as i } from "./IconAccessibleFilled.js";
+const r = {}, l = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "24",
   height: "24",
   fill: "currentColor",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" },
+  viewBox: "0 0 24 24"
 };
-function a(m, t) {
-  return e(), n("svg", l, t[0] || (t[0] = [
-    o("path", { d: "M18 2a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4 1 1 0 0 1-.117-1.993L18 20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2 1 1 0 0 1 0-2m-8 16a4 4 0 1 1-8 0V6a4 4 0 1 1 8 0v5h4.585l-1.292-1.293a1 1 0 0 1-.083-1.32l.083-.094a1 1 0 0 1 1.414 0l3 3 .097.112.071.11.031.062.034.081.024.076.03.148L18 12l-.004.085-.016.116-.03.111-.044.111-.052.098-.074.104-.073.082-3 3a1 1 0 0 1-1.414-1.414L14.585 13H10z" }, null, -1)
+function a(m, e) {
+  return t(), o("svg", l, e[0] || (e[0] = [
+    n("path", { d: "M18 2a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4 1 1 0 0 1-.117-1.993L18 20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2 1 1 0 0 1 0-2m-8 16a4 4 0 1 1-8 0V6a4 4 0 1 1 8 0v5h4.585l-1.292-1.293a1 1 0 0 1-.083-1.32l.083-.094a1 1 0 0 1 1.414 0l3 3 .097.112.071.11.031.062.034.081.024.076.03.148L18 12l-.004.085-.016.116-.03.111-.044.111-.052.098-.074.104-.073.082-3 3a1 1 0 0 1-1.414-1.414L14.585 13H10z" }, null, -1)
   ]));
 }
-const c = /* @__PURE__ */ r(i, [["render", a]]);
+const c = /* @__PURE__ */ i(r, [["render", a]]);
 export {
   c as I
 };
