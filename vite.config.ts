@@ -20,7 +20,7 @@ export default defineConfig({
         dir: 'dist',
         manualChunks(id) {
           if (id.includes('.vue')) {
-            const folder = relative(__dirname, dirname(id)).replace(/\\/g, '/').replace('build/', ''); // Используем правильный формат пути
+            const folder = relative(__dirname, dirname(id)).replace(/\\/g, '/').replace('build/', '');
             if (!folder) {
               return null
             }

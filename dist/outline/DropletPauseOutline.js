@@ -1,0 +1,22 @@
+import { openBlock as t, createElementBlock as o, createElementVNode as n } from "vue";
+import { _ as r } from "../filled/AccessibleFilled.js";
+const i = {}, s = {
+  xmlns: "http://www.w3.org/2000/svg",
+  width: "24",
+  height: "24",
+  fill: "none",
+  stroke: "currentColor",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2",
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
+};
+function l(m, e) {
+  return t(), o("svg", s, e[0] || (e[0] = [
+    n("path", { d: "M18.952 13.456a6.6 6.6 0 0 0-.888-2.579l-4.89-7.26c-.42-.625-1.287-.803-1.936-.397a1.4 1.4 0 0 0-.41.397l-4.893 7.26C4.24 13.715 4.9 17.318 7.502 19.423a7.18 7.18 0 0 0 5.517 1.507M17 17v5m4-5v5" }, null, -1)
+  ]));
+}
+const d = /* @__PURE__ */ r(i, [["render", l]]);
+export {
+  d as D
+};
