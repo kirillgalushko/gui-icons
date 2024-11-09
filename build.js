@@ -26,7 +26,14 @@ function readAndOptimizeSVG(file) {
   return optimize(svgContent, {
     multipass: true,
     plugins: [
-      'preset-default',
+      {
+        name: 'preset-default',
+        params: {
+          overrides: {
+            removeViewBox: false,
+          },
+        },
+      },
       {
         name: 'addAttributesToSVGElement',
         params: {
