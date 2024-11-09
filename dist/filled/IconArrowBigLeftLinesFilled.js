@@ -5,7 +5,8 @@ const i = {}, l = {
   width: "24",
   height: "24",
   fill: "currentColor",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" },
+  viewBox: "0 0 24 24"
 };
 function m(a, e) {
   return t(), o("svg", l, e[0] || (e[0] = [

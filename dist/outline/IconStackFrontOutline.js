@@ -1,4 +1,4 @@
-import { openBlock as n, createElementBlock as o, createElementVNode as t } from "vue";
+import { openBlock as o, createElementBlock as n, createElementVNode as t } from "vue";
 import { _ as r } from "../filled/IconAccessibleFilled.js";
 const l = {}, i = {
   xmlns: "http://www.w3.org/2000/svg",
@@ -9,10 +9,11 @@ const l = {}, i = {
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2",
-  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" }
+  style: { width: "1em", "min-width": "1em", height: "1em", "min-height": "1em" },
+  viewBox: "0 0 24 24"
 };
 function s(m, e) {
-  return n(), o("svg", i, e[0] || (e[0] = [
+  return o(), n("svg", i, e[0] || (e[0] = [
     t("path", {
       fill: "currentColor",
       d: "M12 4 4 8l8 4 8-4z"
